@@ -86,6 +86,7 @@ jsool.namespace("js.ui");
 						d.display = 'block';
 						this.dropVisible = true;
 						
+						or.concelBubble = true;
 						me.hideDrop = function(ev){
 							if(or==ev.original)return false;
 							d.display='none';

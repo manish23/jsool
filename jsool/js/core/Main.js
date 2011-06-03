@@ -76,6 +76,11 @@ var jsool = (function create_jsool(){
 				}
 			}
 		}
+		if(jsool.isIE)
+			Array.iterate(Raze.query(".no-select"),function(i, el){
+				el.unselectable="on";
+				el.onselectstart="return false;";
+			});
 	};
 	
 	base.prepareSystem = function(){
@@ -103,6 +108,7 @@ var jsool = (function create_jsool(){
 			base.doReady();
 			
 			window.onload = null;
+			try{delete window.onload;}catch(e){}
 		};
 	}
 	

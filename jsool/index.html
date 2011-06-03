@@ -72,7 +72,21 @@
 	
 	<script type="text/javascript">
 		var d,tf,dd,dd2;
-		jsool.onReady(function(){			
+		var table;
+		jsool.onReady(function(){
+			table = {
+				x: Raze.queryNode("#x"),
+				cx: Raze.queryNode("#cx"),
+				mx: Raze.queryNode("#mx"),
+				fx: Raze.queryNode("#fx"),
+				ox: Raze.queryNode("#ox"),
+				
+				y: Raze.queryNode("#y"),
+				cy: Raze.queryNode("#cy"),
+				my: Raze.queryNode("#my"),
+				fy: Raze.queryNode("#fy"),
+				oy: Raze.queryNode("#oy")
+			}
 			
 			d = new js.ui.Window({
 				title:"Titulo da minha janela",
@@ -107,14 +121,61 @@
 
 </head>
 <body class="jsool">
-	<span id="lol"></span><br />
-	<div id="drop"></div>
-	<div id="drop2"></div><br />
+	<span id="lol"></span>
+	<span id="drop"></span><br />
+	<span id="drop2"></span>
 	
 	
 	<br />
 	<button class="js-btn">Button</button><br />
 	<input value="Button" type="button" class="js-btn"/><br />
 	<a class="js-btn">Button</a><br />
+	
+	<table>
+		<tr>
+			<td>Mouse X</td>
+			<td id="x">X</td>
+		</tr>
+		<tr>
+			<td>Mouse Y</td>
+			<td id="y">X</td>
+		</tr>
+		<tr>
+			<td>Calculed X</td>
+			<td id="cx">cx</td>
+		</tr>
+		<tr>
+			<td>Calculed Y</td>
+			<td id="cy">CY</td>
+		</tr>
+		
+		<tr>
+			<td>Max X</td>
+			<td id="mx">MX</td>
+		</tr>
+		<tr>
+			<td>Max Y</td>
+			<td id="my">MY</td>
+		</tr>
+		<tr>
+			<td>Final X</td>
+			<td id="fx">FX</td>
+		</tr>
+		
+		<tr>
+			<td>Final Y</td>
+			<td id="fy">FY</td>
+		</tr>
+		
+		<tr>
+			<td>Offset X</td>
+			<td id="ox">FY</td>
+		</tr>
+		
+		<tr>
+			<td>Offset Y</td>
+			<td id="oy">FY</td>
+		</tr>
+	</table>
 </body>
 </html>
