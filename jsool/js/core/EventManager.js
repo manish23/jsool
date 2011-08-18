@@ -76,7 +76,7 @@ js.core.EventManager = (function create_event_manager(){
 				source: event.target || event.source || event.srcElement,
 				type: event.type,
 				key: jsool.isSafari ? safari[event.charCode || event.keyCode] : event.charCode || event.keyCode,
-				button: buttons[event.which || event.button]
+				button: buttons[typeof event.button=='undefined' ? event.which : event.button]
 			};
 			
 			//Call handler			
