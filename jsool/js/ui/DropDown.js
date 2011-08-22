@@ -46,14 +46,17 @@ jsool.namespace("js.ui");
 					value:'V'
 				},{
 					tag:'ul',
-					className:'js-dd no-select',
+					className:'no-select',
 					children: items
 				}]
 			});
 			
 			el.append(html);
 			
-			el.on('click',this.fireEvent,this);
+			var bt = Raze.queryNode('input[type=button]',el.getDom());
+			jsool.get(bt).on('click',this.fireEvent,this);
+			var ul = Raze.queryNode('ul',el.getDom());
+			jsool.get(ul).on('click',this.fireEvent,this);
 		},
 		
 		
@@ -75,18 +78,18 @@ jsool.namespace("js.ui");
 				if(t == 'LI'){//selecting element
 					
 					this.selected = this.items[src.getAttribute('index')];
-					w.query("input",true)[0].value=src.innerHTML;
+					w.query("input")[0].value=src.innerHTML;
 					this.fireEvent('select',this.selected);
 					
 				}else if(t == 'INPUT'){ //Drop
 					
-					if(!this.dropVisible){
-						d = w.query("ul",true)[0].style;
+					if(!this.dropVisible){						
+						d = w.query("ul")[0].style;
 						
 						d.display = 'block';
 						this.dropVisible = true;
 						
-						or.concelBubble = true;
+						or.cancelBubble = true;
 						me.hideDrop = function(ev){
 							if(or==ev.original)return false;
 							d.display='none';

@@ -73,7 +73,7 @@ a.js-btn{
 .ff input[type=submit].js-btn,
 .ff input[type=reset].js-btn,
 .ff button.js-btn{
-	padding: 3px 2px;
+	padding: 2px 2px;
 }
 
 .opera a.js-btn, .ff a.js-btn{
@@ -221,7 +221,7 @@ div.js-dd input[type=button]:hover{
 	background-position: 0 22px;
 }
 
-ul.js-dd{
+.js-dd ul{
 	background-color: white;
 	width: 230px;
 	padding: 2px 0;
@@ -233,7 +233,7 @@ ul.js-dd{
 	display:none;
 }
 
-ul.js-dd li{
+.js-dd ul li{
 	color:#222D49;
 	height:12px;
 	padding: 4px 4px;
@@ -242,7 +242,7 @@ ul.js-dd li{
 	border-top: dotted #6997d2 1px;
 }
 
-ul.js-dd li:hover{
+.js-dd ul li:hover{
 	background-color: #D6E8FF;
 	color:black;
 }

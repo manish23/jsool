@@ -49,7 +49,7 @@ js.core.EventManager = (function create_event_manager(){
 	},
 	
 	buttons = jsool.isOpera ? {1:0,4:1,2:2} : //Opera
-				jsool.isFF ? {1:0,2:1,3:2} : //Firefox
+				jsool.isFF ? {0:0,1:1,2:2} : //Firefox
 				jsool.isSafari? {1:0,2:1,3:2} : //Safari
 				{0:0,1:1,2:2},
 	ieBody;
@@ -78,7 +78,7 @@ js.core.EventManager = (function create_event_manager(){
 				key: jsool.isSafari ? safari[event.charCode || event.keyCode] : event.charCode || event.keyCode,
 				button: buttons[typeof event.button=='undefined' ? event.which : event.button]
 			};
-			
+	
 			//Call handler			
 			ret = fn.call(scope, ev);
 			

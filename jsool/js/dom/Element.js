@@ -343,9 +343,10 @@ js.dom.Element = $extends(js.core.Object,{
 		js.dom.Element.unCache(this);
 		//Delete DOM
 		delete this.dom;
+		this.dom = null;
 	},
 	query: function(selector,dom){
-		return dom ? Raze.query(selector, this.getDom()) : js.dom.Element.select(selector);
+		return (typeof dom=='undefined'?true:false)?Raze.query(selector, this.getDom()):js.dom.Element.select(selector);
 	},
 	setOpacity: function(op){
 		var s = this.dom.style;
