@@ -1,10 +1,10 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Tester</title>
 	
+	<link rel="stylesheet" type="text/css" href="css/core.css">
+	
 	<script type="text/javascript" src="js/core/Main.js"></script>
-	<script type="text/javascript" src="js/core/Function.js"></script>
 	<script type="text/javascript" src="js/core/Number.js"></script>
 	<script type="text/javascript" src="js/core/String.js"></script>
 	<script type="text/javascript" src="js/core/Array.js"></script>
@@ -17,118 +17,117 @@
 	<script type="text/javascript" src="js/util/MixedCollection.js"></script>
 	<script type="text/javascript" src="js/util/List.js"></script>
 	<script type="text/javascript" src="js/util/ArrayList.js"></script>
-	<!-- <script type="text/javascript" src="js/util/LinkedList.js"></script> -->
+	<script type="text/javascript" src="js/util/LinkedList.js"></script>
 	<script type="text/javascript" src="js/util/HashSet.js"></script>
 	<script type="text/javascript" src="js/util/Map.js"></script>
 	<script type="text/javascript" src="js/util/HashMap.js"></script>
-	<!-- <script type="text/javascript" src="js/util/ReferenceMap.js"></script>
+	<script type="text/javascript" src="js/util/ReferenceMap.js"></script>
 	<script type="text/javascript" src="js/util/StringBuilder.js"></script>
-	<script type="text/javascript" src="js/util/Serializable.js"></script> -->
+	<script type="text/javascript" src="js/util/Locale.js"></script>
+	<script type="text/javascript" src="js/util/Serializable.js"></script>
 	<script type="text/javascript" src="js/util/Observable.js"></script>
-	<!-- <script type="text/javascript" src="js/util/DateFormat.js"></script>
+	<script type="text/javascript" src="js/util/DateFormat.js"></script>
 	<script type="text/javascript" src="js/util/JSON.js"></script>
-	<script type="text/javascript" src="js/util/Encoder.js"></script> -->
 	
-	<script type="text/javascript" src="raze2.js"></script>
+	<script type="text/javascript" src="Raze.js"></script>
 	
-	<!-- <script type="text/javascript" src="js/dom/Template.js"></script> -->
+	<script type="text/javascript" src="js/dom/Template.js"></script>
 	<script type="text/javascript" src="js/dom/Helper.js"></script>	
 	<script type="text/javascript" src="js/dom/Element.js"></script>
 	<script type="text/javascript" src="js/dom/CompositeElement.js"></script>
 	
-	<!-- <script type="text/javascript" src="js/canvas/Canvas.js"></script>
+	<script type="text/javascript" src="js/canvas/Canvas.js"></script>
+
+	<script type="text/javascript" src="js/net/HttpRequest.js"></script>
+	<script type="text/javascript" src="js/net/HttpRequestDispatcher.js"></script>
 	
-	<script type="text/javascript" src="js/net/RequestDispatcher.js"></script> -->
-	
-	<script type="text/javascript" src="js/ui/TextField.js"></script>
-	<script type="text/javascript" src="js/ui/DropDown.js"></script>
-	<script type="text/javascript" src="js/ui/Window.js"></script>
-	
-	<!-- <script type="text/javascript" src="js/data/Field.js"></script>
+	<script type="text/javascript" src="js/data/Field.js"></script>
 	<script type="text/javascript" src="js/data/Record.js"></script>
 	<script type="text/javascript" src="js/data/Type.js"></script>
-	<script type="text/javascript" src="js/data/Store.js"></script> -->
+	<script type="text/javascript" src="js/data/Store.js"></script>
 	
-	<!-- <script type="text/javascript" src="js/flux/laf/Soft.js"></script>
+	<script type="text/javascript" src="js/juif/Component.js"></script>
+	<script type="text/javascript" src="js/juif/ViewPort.js"></script>
+	<script type="text/javascript" src="js/juif/Button.js"></script>
+	<script type="text/javascript" src="js/juif/TextField.js"></script>
+	<script type="text/javascript" src="js/juif/Combo.js"></script>
 	
 	<script type="text/javascript" src="js/flux/Component.js"></script>
 	<script type="text/javascript" src="js/flux/Container.js"></script>
-	<script type="text/javascript" src="js/flux/RootContainer.js"></script>
 	<script type="text/javascript" src="js/flux/Button.js"></script>
-	<script type="text/javascript" src="js/flux/ToggleButton.js"></script>
-	<script type="text/javascript" src="js/flux/CheckBox.js"></script>
 	<script type="text/javascript" src="js/flux/UIManager.js"></script>
 	
-	<script type="text/javascript" src="js/flux/layout/Layout.js"></script>
-	<script type="text/javascript" src="js/flux/layout/BorderLayout.js"></script>
-	<script type="text/javascript" src="js/flux/layout/RowLayout.js"></script>
-	<script type="text/javascript" src="js/flux/layout/ColLayout.js"></script>
-	<script type="text/javascript" src="js/flux/layout/SpringLayout.js"></script>
-	<script type="text/javascript" src="js/flux/layout/Spring.js"></script>
-	<script type="text/javascript" src="js/flux/layout/SpringConstraint.js"></script>
-	<script type="text/javascript" src="js/flux/layout/SpringProxy.js"></script> -->
+	<script type="text/javascript" src="js/flux/Layout.js"></script>
+	<script type="text/javascript" src="js/flux/BorderLayout.js"></script>
+	<script type="text/javascript" src="js/flux/RowLayout.js"></script>
+	<script type="text/javascript" src="js/flux/ColLayout.js"></script>
+	<script type="text/javascript" src="js/flux/SpringLayout.js"></script>
 	
-	<link rel="stylesheet" type="text/css" href="css/core.css"></link>
+	<script type="text/javascript" src="js/flux/laf/Soft.js"></script>
 	
 	<script type="text/javascript">
-		var d,tf,dd,dd2;
-		var table;
-		jsool.onReady(function(){
-			table = {
-				x: Raze.queryNode("#x"),
-				cx: Raze.queryNode("#cx"),
-				mx: Raze.queryNode("#mx"),
-				fx: Raze.queryNode("#fx"),
-				ox: Raze.queryNode("#ox"),
-				
-				y: Raze.queryNode("#y"),
-				cy: Raze.queryNode("#cy"),
-				my: Raze.queryNode("#my"),
-				fy: Raze.queryNode("#fy"),
-				oy: Raze.queryNode("#oy")
-			}
-			
-			d = new js.ui.Window({
-				title:"Titulo da minha janela",
-				x:'300px',
-				y:'10px',
-				show:true
-			});
+	jsool.onReady(function(){
+		a = new js.flux.Container();
+		a.setX(10);
+		a.setY(10);
+		a.setWidth(400);
+		a.setHeight(250);
+		js.flux.UIManager.add(a);
 
-			tf = new js.ui.TextField({
-				render: "lol",
-				value:"",
-				enabled: true
-			});
+		a.setLayout(new js.flux.BorderLayout());
+		
+		b = new js.flux.Button();
+		a.add(b,"TOP");		
 
-			dd = new js.ui.DropDown({
-				render:'drop',
-				items:['Mikhail','Rodrigo','Marcelo','Eduardo','Fernando','Romão','Tiago','Eduardo','Nathalia']
-			});
+		c = new js.flux.Container();
+		a.add(c,"BOTTOM");
+		c.add(new js.flux.Button("BT 1"));
+		c.add(new js.flux.Button("BT 2"));
+		c.add(new js.flux.Button("BT 3"));
+		c.setHeight(40);
 
-			dd.on('select',function(sel){
-				console.info(sel);
-				console.info(this);
-			});
+		c.setLayout(new js.flux.RowLayout());
 
-			dd2 = new js.ui.DropDown({
-				render:'drop2',
-				items:[1,2,3,4,5,6,7,8,9,4,5,6,1,2,3]
-			});
-			
-		});
+		d = new js.flux.Container();
+		d.add(new js.flux.Button("BT 4"));
+		d.add(new js.flux.Button("BT 5"));
+		d.add(new js.flux.Button("lolly"));
+		d.setLayout(new js.flux.ColLayout());
+		a.add(d,"LEFT");
+
+		e = new js.flux.Button();
+		a.add(e,"RIGHT");
+
+		f = new js.flux.Container();
+		a.add(f,"CENTER");
+
+		var l = new js.flux.SpringLayout();
+		f.setLayout(l);
+
+		var b1,b2,b3,b4;
+
+		b1 = new js.flux.Button("b1");
+		b2 = new js.flux.Button("b2");
+		b3 = new js.flux.Button("b3");
+		b4 = new js.flux.Button("b4");
+
+		f.add(b1);
+		l.putConstraint(b1,"left",5,l,"left");
+		l.putConstraint(b1,"top",20,l,"top");
+		
+		f.add(b2);
+		l.putConstraint(b2,"left",0,b1,"left");
+		l.putConstraint(b2,"top",40,b1,"top");
+		//f.add(b3);
+		//f.add(b4);
+	});
+	
 	</script>
 
 </head>
-<body class="jsool">
-	<span id="lol"></span>
-	<span id="drop"></span><br />
-	<span id="drop2"></span>
-	
-	
-	<br />
-	<button class="js-btn">Button</button><br />
-	<input value="Button" type="button" class="js-btn"/><br />
-	<a class="js-btn">Button</a><br />
+<body>
+	<div id="ake"></div>
+	<div id="aki"></div>
+	<div id="la"></div>
 </body>
 </html>
